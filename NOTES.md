@@ -1,0 +1,1 @@
+- use Amazon rekognition on images (can do better)

@@ -1,0 +1,6 @@
+requests
+jupyterlab
+pandas
+scikit-learn
+spacy
+streamlit
