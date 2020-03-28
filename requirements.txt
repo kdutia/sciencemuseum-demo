@@ -1,6 +1,7 @@
+spacy
+streamlit
 requests
 jupyterlab
 pandas
-scikit-learn
-spacy
-streamlit
+plotly==4.5.0
+scikit-learn==0.22.1
