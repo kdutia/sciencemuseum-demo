@@ -114,14 +114,14 @@ def run_page_entities(df):
         "> *'To apply a series of digital tools / computational methods to create speculative identifications between different records within the test dataset.'* "
     )
     st.markdown(
-        "Creating identifications in the current collection data is difficult because it is *unstructured*: it consists of mostly text and image fields, which"
+        "Creating identifications in the current collection data is difficult because it is *unstructured*: it consists of mostly text and image fields which"
         " are hard to reconcile with each other. Here we explore **Named Entity Recognition (NER)** to create some structure from the description field of each"
         " collection document. "
     )
     st.markdown("---")
     
     st.subheader("Enriching Descriptions with NER")
-    st.markdown("Named entity recognition extracts known fields of [various types](https://spacy.io/api/annotation#named-entities), using a neural net"
+    st.markdown("Named entity recognition extracts known fields of [various types](https://spacy.io/api/annotation#named-entities) using a neural net"
                 " and word embeddings (see other page). **Select a collection item below and toggle NER to see it in action.**"
                 )
     title = st.selectbox("", df['title'].tolist(), index=16)
@@ -144,7 +144,7 @@ def run_page_entities(df):
 
     st.subheader("Towards a Structured Collection")
     st.markdown(
-        "Entities can be used to link records together - below is a network of the links between items in different categories using entity"
+        "Entities can be used to link records together. Below is a network of the links between items in different categories using entity"
         " extraction, none of which existed before. The darker the line, the stronger the link. **Toggle the checkbox below to see how entities"
         " have created structure between collection items.**"
     )
@@ -156,7 +156,7 @@ def run_page_entities(df):
 
     st.subheader("Using Entities to Search")
     st.markdown(
-        "Once we've created this structure we can use it to search through the collections. This becomes more powerful when we can perform"
+        "Once we've created this structure it can be used to search through the collections. This becomes more powerful when we can perform"
         " *Named Entity Linking* to link documents up with an external knowledge base. **Search through the collection using entities below.**"
     )
     st.markdown(
@@ -178,11 +178,11 @@ def run_page_entities(df):
 
 
 def run_page_embeddings(df):
-    st.header('Mapping Collection Items with Word Embeddigs')
+    st.header('Mapping Collection Items with Word Embeddings')
     st.markdown("  ")
     st.markdown(
         "Word embeddings (e.g. [word2vec](https://jalammar.github.io/illustrated-word2vec)) are a common machine learning method used"
-        " to transform words and by extension sentences or paragraphs into fixed-length vectors, where semantically similar words and phrases"
+        " to transform words, sentences or paragraphs into fixed-length vectors. Semantically similar words and phrases"
         " have vectors that are closer together."
     )
     st.image("https://www.tensorflow.org/images/linear-relationships.png", caption="source: https://www.tensorflow.org/images/linear-relationships.png", use_column_width=True)
@@ -195,7 +195,7 @@ def run_page_embeddings(df):
     st.subheader('Creating a Map')
     st.markdown(
         "By visualising a two-dimensional representation of word embeddings created from the title of each collection item, we can create a "
-        " 'map' of items coloured by Category, as below. A map like this could be tried as a new way of exploring the collection, and also gives us"
+        " 'map' of items coloured by Category (shown below). A map like this could be tried as a new way of exploring the collection and gives us"
         " clues about we could best exploit these embeddings!"
     )
     st.markdown(
@@ -211,7 +211,7 @@ def run_page_embeddings(df):
     st.subheader('Searching for Similar Collection Items')
     st.markdown(
         "In this section we'll exploit the property of word embedding vectors that *similar phrases have vectors that are closer together*."
-        " The similar item search below works by looking up the vector of the item you choose, and finding the closest items to it (you can"
+        " The similar item search below works by looking up the vector of the item you choose and finding the closest items to it (you can"
         " change the number of closest items with the slider)."
     )
     st.markdown(
@@ -219,7 +219,7 @@ def run_page_embeddings(df):
         " could be used to fetch similar journal articles to an item, based on their abstracts."
     )
     st.markdown("#### 1. Pick an item")
-    title = st.selectbox("", df['title'].tolist(), index=1265)
+    title = st.selectbox("Choose item by title", df['title'].tolist(), index=1265)
     id_ = df[df['title'] == title].index.values
     st.markdown(f"**Description: ** {df.loc[id_, 'description'].values[0]}")
     st.markdown(f"**Category: ** {df.loc[id_, 'category'].values[0]}")
