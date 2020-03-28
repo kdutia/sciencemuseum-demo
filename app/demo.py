@@ -71,7 +71,7 @@ def search_entities(entity_list, df):
 
 welcome_message = """<p style='color:#E60060; font-weight:600; font-size:{}em'>
 This is a demo showing how machine learning can be applied to the Science Museum collection to extract meaning from
- text, as part of the Heritage Connector project.
+ text.
 </p>
 <p style='color:#000000; font-weight:600; font-size:1.3em'>
 by <a style='color:#004899' href='mailto:kalyan.dutia@gmail.com'>Kalyan Dutia</a>
