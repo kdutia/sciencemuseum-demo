@@ -76,6 +76,12 @@ This is a demo showing how machine learning can be applied to the Science Museum
 <p style='color:#000000; font-weight:600; font-size:1.3em'>
 by <a style='color:#004899' href='mailto:kalyan.dutia@gmail.com'>Kalyan Dutia</a>
 </p>
+<details open>
+<summary>About</summary>
+I've built this to show how NLP techniques, namely word embeddings and named entity extraction, can be used to create structure and extract meaning
+from the Science Museum collection. The data used here is from the <a href='https://collection.sciencemuseumgroup.org.uk/search/museum/science-museum/gallery/medicine:-the-wellcome-galleries'>
+Wellcome Galleries</a>.
+</details>
 </br>
 """
 
